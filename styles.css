@@ -1,0 +1,239 @@
+
+html, body {
+    height:100%;
+    background-color: #FAF5E9;
+} 
+
+.material-icons.myIvory { color: #FAF5E9;}
+.material-icons.myGreen { color: #009B4D;}
+.material-icons.md-24 { font-size: 24px; }
+
+/*Header*/
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+}
+
+.topnav { /*Outer class*/
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 98%; /* Full width */
+    z-index: 1; /*Keep it on top*/
+    margin-left: 1rem;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.topnav i, .topnav a, #headerCoName span { /**/
+    float: left;
+    color: #FAF5E9;
+    text-align: center;
+    padding: 14px 0px; /*All elements get vertical padding*/
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.topnav i {
+    margin-left: 0.5rem;
+    margin-top: 6px;
+}
+
+
+
+.headerNowThen {
+    margin-left: 1.5rem;
+    margin-right: 1rem;
+    font-style: italic;
+    font-size: 5px;
+}
+
+.topnav-right a {
+    float: right;
+    padding: 14px 16px;
+}
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.topnav a.active {
+    background-color: #FFCC00;
+    color: FAF5E9;
+}
+
+/*Main - mission statement*/
+
+.missionStatement { /*Parent with image*/
+    display: flex; /*Use these two to keep the text in the center when resizing the screen*/
+    justify-content: center;
+    background-image: url("./Resources/shop1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 700px;
+
+    overflow: hidden;
+    max-width: 100%;
+}
+
+#missionCoName {/*Child overlay text*/
+    width: 100%; /*makes this as wide as the image*/
+    color: #FAF5E9;
+    background-color: #009B4D;
+    text-align: center; /*Centers the text in the box*/
+    position: absolute;
+    top: 40%;
+    padding: 1rem 0rem;
+}
+
+.missionStatement #missionNowThen {
+    font-style: italic;
+}
+
+/*Goods Section*/
+#specialDeals {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 2rem 0rem;
+    background-color: #009B4D;
+    color: #FAF5E9;
+    overflow: hidden;
+}
+
+#specialDeals h1 {
+    font-style: italic;
+}
+
+.goodsFlexContainer {
+    display: flex;
+    /*flex-direction: row;
+    flex-wrap: wrap;*/
+    flex-flow: row wrap; /*this is the shorthand for the two above*/
+    margin: 1.5rem;
+    overflow: hidden;
+}
+.goodsFlexContainer button {
+    color: #FAF5E9;
+    background-color: black;
+}
+
+.goodsFlexContainer button:hover {
+    color: #009B4D;
+    background-color: #FAF5E9;
+}
+
+.goodsFlexContainer button:active {
+    background-color: black;
+}
+
+.img {
+    width: 33%;
+    box-sizing: border-box;
+    background-color:  #FAF5E9;
+    padding: 0.75rem; 
+}
+
+  /* The Team section*/
+  #theTeam {
+    text-align: center;
+    margin-top: 4rem;
+    background-color: #009B4D;
+    color: #FAF5E9;
+    padding: 2rem 0rem;
+    overflow: hidden;
+  }
+
+  .teamMembers {
+    display: flex;
+    /*flex-direction: row;
+    flex-wrap: wrap;*/
+    flex-flow: row wrap; /*this is the shorthand for the two above*/
+    margin: 1.5rem;
+    align-items: baseline;
+    overflow: hidden;
+}
+
+.teamImg {
+    width: 33%;
+    box-sizing: border-box;
+    background-color:  #FAF5E9;
+    padding: 4rem; 
+}
+
+.teamImg p {
+    text-align: center;
+}
+.teamMembers .jobRoleAcronym {
+    float: right;
+    font-style: italic;
+}
+
+.teamMembers .jobRole {
+
+    font-style: italic;
+    font-size: 1rem;
+}
+
+  /* Footer */
+  #footerCoName {
+    width: 100%; /*makes this as wide as the image*/
+    color: #FAF5E9;
+    background-color: #009B4D;
+    text-align: center; /*Centers the text in the box*/
+    padding: 1rem 0rem;
+}
+
+.footerContent {
+    display: flex;
+    /*flex-direction: row;
+    flex-wrap: wrap;*/
+    flex-flow: row wrap; /*this is the shorthand for the two above*/
+    margin: 1.5rem;
+    align-items: baseline;
+    overflow: hidden;
+}
+
+.footerItems {
+    width: 33%;
+    box-sizing: border-box;
+    background-color:  #FAF5E9;
+    padding: 2rem 0rem; 
+}
+
+.footerContent img {
+    padding: .5rem 1rem;
+}
+
+.footerContent h5 {
+    text-align: center;
+}
+
+.footerContent h4 {
+    text-align: center;
+    background-color: #009B4D;
+}
+
+/* On screens that are 1100px wide or less, go from 3 columns to 2 columns */
+@media screen and (max-width: 1100px) {
+    .img, .teamImg, .footerItems {
+      flex: 50%;
+    }
+}
+
+  @media screen and (max-width: 940px) {
+    #navAbout, #navSearch, #navContact, #navNews {
+        display: none;
+    }
+}
+
+  /* On screens that are 700px wide or less, go from 2 columns to 1 columns */
+@media screen and (max-width: 700px) {
+    .img, .teamImg, .footerItems {
+      flex: 100%;
+    }
+}
+
+  @media screen and (max-width: 530px) {
+    .active {
+        display: none;
+    }
+}
